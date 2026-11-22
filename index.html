@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>삼척 태양광 일사량 & 발전량 대시보드</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 1040px; margin: 24px auto; padding: 0 16px; color: #1f2937; }
+    .controls { display: flex; flex-wrap: wrap; gap: 16px; background: #f3f4f6; padding: 14px; border-radius: 10px; margin-bottom: 20px; }
+    .controls label { display: flex; flex-direction: column; font-size: 0.9rem; gap: 4px; }
+    .controls input { padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 6px; width: 130px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 20px; background: #fff; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <h1>삼척 태양광 일사량 · 발전량 모니터링</h1>
+  <div id="meta" class="meta">데이터 불러오는 중...</div>
 
+  <div class="controls">
+    <label>
+      설비용량 (kWp)
+      <input id="capacityKw" type="number" step="0.5" min="0.5" value="10" />
+    </label>
+    <label>
+      성능비 PR (0.5 ~ 0.95)
+      <input id="prValue" type="number" step="0.01" min="0.5" max="0.95" value="0.80" />
+    </label>
+  </div>
+
+  <div class="card">
+    <h2>일사량 추이 (W/m²)</h2>
+    <canvas id="irradianceChart" height="100"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>예상 태양광 발전량 (kW, 수식 추정)</h2>
+    <canvas id="powerChart" height="90"></canvas>
+  </div>
+
+  <script>
+    let irrChart = null;
+    let pwrChart = null;
+    let records = [];
+
+    function renderCharts() {
+      const cap = parseFloat(document.getElementById("capacityKw").value) || 10;
+      const pr = parseFloat(document.getElementById("prValue").value) || 0.8;
+
+      const labels = records.map(r => r.time.replace("T", " "));
+      const ghi = records.map(r => Number(r.shortwave_radiation ?? 0));
+      const dni = records.map(r => Number(r.direct_normal_irradiance ?? 0));
+      const dhi = records.map(r => Number(r.diffuse_radiation ?? 0));
+      const estKw = ghi.map(g => Number((cap * (g / 1000) * pr).toFixed(2)));
+
+      if (irrChart) irrChart.destroy();
+      if (pwrChart) pwrChart.destroy();
+
+      irrChart = new Chart(document.getElementById("irradianceChart"), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            { label: "GHI (shortwave_radiation)", data: ghi, borderWidth: 2, pointRadius: 1 },
+            { label: "DNI (direct_normal_irradiance)", data: dni, borderWidth: 2, pointRadius: 1 },
+            { label: "DHI (diffuse_radiation)", data: dhi, borderWidth: 1.5, pointRadius: 1 }
+          ]
+        },
+        options: { responsive: true, interaction: { mode: "index", intersect: false } }
+      });
+
+      pwrChart = new Chart(document.getElementById("powerChart"), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            { label: "추정 발전량 (kW)", data: estKw, borderWidth: 2, pointRadius: 1, fill: true }
+          ]
+        },
+        options: { responsive: true, interaction: { mode: "index", intersect: false } }
+      });
+    }
+
+    async function init() {
+      const res = await fetch("./data/latest_forecast.json?t=" + Date.now());
+      const data = await res.json();
+      records = data.records || [];
+      document.getElementById("meta").textContent = `최근 수집 시각(KST): ${data.updated_at_kst} · 총 ${records.length}개 시간대`;
+      renderCharts();
+    }
+
+    document.getElementById("capacityKw").addEventListener("input", renderCharts);
+    document.getElementById("prValue").addEventListener("input", renderCharts);
+    init();
+  </script>
+</body>
+</html>
