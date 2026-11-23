@@ -1,377 +1,161 @@
 {
-  "updated_at_kst": "2026-11-23T09:00:20+09:00",
+  "updated_at_kst": "2026-11-24T04:00:09+09:00",
   "records": [
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T00:00",
-      "temperature_2m": 4.9,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T01:00",
-      "temperature_2m": 4.7,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T02:00",
-      "temperature_2m": 5.1,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T03:00",
-      "temperature_2m": 5.3,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T04:00",
-      "temperature_2m": 5.7,
-      "cloud_cover": 17,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T05:00",
-      "temperature_2m": 6.1,
-      "cloud_cover": 34,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T06:00",
-      "temperature_2m": 6.0,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T07:00",
-      "temperature_2m": 6.1,
-      "cloud_cover": 16,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T08:00",
-      "temperature_2m": 6.4,
-      "cloud_cover": 32,
-      "shortwave_radiation": 22.0,
-      "direct_normal_irradiance": 13.0,
-      "diffuse_radiation": 20.9
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T09:00",
-      "temperature_2m": 8.2,
-      "cloud_cover": 30,
-      "shortwave_radiation": 130.0,
-      "direct_normal_irradiance": 200.9,
-      "diffuse_radiation": 86.5
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T10:00",
-      "temperature_2m": 10.3,
-      "cloud_cover": 34,
-      "shortwave_radiation": 245.0,
-      "direct_normal_irradiance": 311.4,
-      "diffuse_radiation": 133.2
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T11:00",
-      "temperature_2m": 12.4,
-      "cloud_cover": 6,
-      "shortwave_radiation": 375.0,
-      "direct_normal_irradiance": 477.2,
-      "diffuse_radiation": 154.3
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T12:00",
-      "temperature_2m": 13.4,
-      "cloud_cover": 26,
-      "shortwave_radiation": 455.0,
-      "direct_normal_irradiance": 567.1,
-      "diffuse_radiation": 159.9
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T13:00",
-      "temperature_2m": 13.8,
-      "cloud_cover": 82,
-      "shortwave_radiation": 376.0,
-      "direct_normal_irradiance": 362.6,
-      "diffuse_radiation": 184.4
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T14:00",
-      "temperature_2m": 14.2,
-      "cloud_cover": 89,
-      "shortwave_radiation": 354.0,
-      "direct_normal_irradiance": 380.4,
-      "diffuse_radiation": 169.2
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T15:00",
-      "temperature_2m": 14.4,
-      "cloud_cover": 87,
-      "shortwave_radiation": 250.0,
-      "direct_normal_irradiance": 264.4,
-      "diffuse_radiation": 145.3
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T16:00",
-      "temperature_2m": 14.2,
-      "cloud_cover": 98,
-      "shortwave_radiation": 110.0,
-      "direct_normal_irradiance": 81.8,
-      "diffuse_radiation": 88.3
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T17:00",
-      "temperature_2m": 13.8,
-      "cloud_cover": 94,
-      "shortwave_radiation": 46.0,
-      "direct_normal_irradiance": 65.2,
-      "diffuse_radiation": 38.6
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T18:00",
-      "temperature_2m": 13.5,
-      "cloud_cover": 100,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T19:00",
-      "temperature_2m": 13.3,
-      "cloud_cover": 100,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T20:00",
-      "temperature_2m": 13.5,
-      "cloud_cover": 100,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T21:00",
-      "temperature_2m": 13.9,
-      "cloud_cover": 92,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T22:00",
-      "temperature_2m": 13.9,
-      "cloud_cover": 77,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-23T23:00",
-      "temperature_2m": 13.1,
-      "cloud_cover": 52,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T00:00",
-      "temperature_2m": 12.7,
-      "cloud_cover": 27,
+      "temperature_2m": 12.6,
+      "cloud_cover": 39,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T01:00",
-      "temperature_2m": 12.1,
-      "cloud_cover": 60,
+      "temperature_2m": 11.7,
+      "cloud_cover": 53,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T02:00",
-      "temperature_2m": 10.6,
-      "cloud_cover": 9,
+      "temperature_2m": 10.3,
+      "cloud_cover": 59,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T03:00",
       "temperature_2m": 8.4,
-      "cloud_cover": 0,
+      "cloud_cover": 78,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T04:00",
-      "temperature_2m": 6.6,
-      "cloud_cover": 0,
+      "temperature_2m": 6.8,
+      "cloud_cover": 23,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T05:00",
-      "temperature_2m": 5.3,
+      "temperature_2m": 5.6,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T06:00",
-      "temperature_2m": 4.1,
+      "temperature_2m": 4.6,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T07:00",
-      "temperature_2m": 3.3,
+      "temperature_2m": 3.9,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T08:00",
-      "temperature_2m": 2.8,
+      "temperature_2m": 3.3,
       "cloud_cover": 0,
       "shortwave_radiation": 28.0,
       "direct_normal_irradiance": 38.4,
       "diffuse_radiation": 24.8
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T09:00",
-      "temperature_2m": 3.0,
+      "temperature_2m": 3.5,
       "cloud_cover": 0,
-      "shortwave_radiation": 179.0,
-      "direct_normal_irradiance": 414.7,
-      "diffuse_radiation": 90.7
+      "shortwave_radiation": 178.0,
+      "direct_normal_irradiance": 410.5,
+      "diffuse_radiation": 90.5
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T10:00",
-      "temperature_2m": 3.4,
+      "temperature_2m": 3.7,
       "cloud_cover": 0,
-      "shortwave_radiation": 346.0,
-      "direct_normal_irradiance": 621.0,
+      "shortwave_radiation": 345.0,
+      "direct_normal_irradiance": 618.4,
       "diffuse_radiation": 125.2
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T11:00",
-      "temperature_2m": 3.6,
+      "temperature_2m": 3.7,
       "cloud_cover": 0,
-      "shortwave_radiation": 474.0,
-      "direct_normal_irradiance": 731.8,
+      "shortwave_radiation": 475.0,
+      "direct_normal_irradiance": 733.9,
       "diffuse_radiation": 137.9
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T12:00",
-      "temperature_2m": 3.7,
+      "temperature_2m": 3.8,
       "cloud_cover": 0,
-      "shortwave_radiation": 547.0,
-      "direct_normal_irradiance": 782.9,
+      "shortwave_radiation": 548.0,
+      "direct_normal_irradiance": 784.9,
       "diffuse_radiation": 142.1
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T13:00",
-      "temperature_2m": 3.8,
+      "temperature_2m": 3.7,
       "cloud_cover": 0,
-      "shortwave_radiation": 557.0,
-      "direct_normal_irradiance": 788.8,
+      "shortwave_radiation": 558.0,
+      "direct_normal_irradiance": 790.8,
       "diffuse_radiation": 142.6
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T14:00",
       "temperature_2m": 3.5,
       "cloud_cover": 0,
-      "shortwave_radiation": 504.0,
-      "direct_normal_irradiance": 753.6,
-      "diffuse_radiation": 139.8
+      "shortwave_radiation": 506.0,
+      "direct_normal_irradiance": 757.6,
+      "diffuse_radiation": 139.9
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T15:00",
-      "temperature_2m": 3.2,
+      "temperature_2m": 3.1,
       "cloud_cover": 0,
-      "shortwave_radiation": 395.0,
-      "direct_normal_irradiance": 670.5,
-      "diffuse_radiation": 131.0
+      "shortwave_radiation": 397.0,
+      "direct_normal_irradiance": 675.2,
+      "diffuse_radiation": 131.2
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T16:00",
       "temperature_2m": 2.7,
       "cloud_cover": 0,
-      "shortwave_radiation": 240.0,
-      "direct_normal_irradiance": 510.4,
-      "diffuse_radiation": 105.9
+      "shortwave_radiation": 242.0,
+      "direct_normal_irradiance": 517.1,
+      "diffuse_radiation": 106.1
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T17:00",
       "temperature_2m": 2.0,
       "cloud_cover": 0,
@@ -380,16 +164,16 @@
       "diffuse_radiation": 46.9
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T18:00",
-      "temperature_2m": 1.3,
+      "temperature_2m": 1.4,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T19:00",
       "temperature_2m": 1.0,
       "cloud_cover": 0,
@@ -398,62 +182,17 @@
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T20:00",
-      "temperature_2m": 0.8,
+      "temperature_2m": 0.7,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-24T21:00",
-      "temperature_2m": 0.6,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-24T22:00",
-      "temperature_2m": 0.5,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-24T23:00",
-      "temperature_2m": 0.3,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-25T00:00",
-      "temperature_2m": 0.2,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-25T01:00",
-      "temperature_2m": 0.2,
-      "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-25T02:00",
       "temperature_2m": 0.4,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
@@ -461,189 +200,450 @@
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-24T22:00",
+      "temperature_2m": 0.2,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-24T23:00",
+      "temperature_2m": 0.0,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-25T00:00",
+      "temperature_2m": -0.1,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-25T01:00",
+      "temperature_2m": -0.1,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-25T02:00",
+      "temperature_2m": -0.0,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T03:00",
-      "temperature_2m": 0.5,
+      "temperature_2m": 0.0,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T04:00",
-      "temperature_2m": 0.8,
+      "temperature_2m": 0.1,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T05:00",
-      "temperature_2m": 1.0,
+      "temperature_2m": 0.4,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T06:00",
-      "temperature_2m": 1.3,
+      "temperature_2m": 0.6,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T07:00",
+      "temperature_2m": 0.9,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-25T08:00",
       "temperature_2m": 1.4,
       "cloud_cover": 0,
-      "shortwave_radiation": 0.0,
-      "direct_normal_irradiance": 0.0,
-      "diffuse_radiation": 0.0
+      "shortwave_radiation": 27.0,
+      "direct_normal_irradiance": 36.4,
+      "diffuse_radiation": 24.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
-      "time": "2026-11-25T08:00",
-      "temperature_2m": 1.7,
-      "cloud_cover": 0,
-      "shortwave_radiation": 26.0,
-      "direct_normal_irradiance": 31.7,
-      "diffuse_radiation": 23.4
-    },
-    {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T09:00",
-      "temperature_2m": 2.9,
+      "temperature_2m": 2.7,
       "cloud_cover": 0,
-      "shortwave_radiation": 175.0,
-      "direct_normal_irradiance": 407.7,
-      "diffuse_radiation": 89.5
+      "shortwave_radiation": 177.0,
+      "direct_normal_irradiance": 416.1,
+      "diffuse_radiation": 89.7
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T10:00",
-      "temperature_2m": 4.1,
+      "temperature_2m": 4.0,
       "cloud_cover": 0,
-      "shortwave_radiation": 339.0,
-      "direct_normal_irradiance": 609.2,
-      "diffuse_radiation": 124.5
+      "shortwave_radiation": 343.0,
+      "direct_normal_irradiance": 619.8,
+      "diffuse_radiation": 124.7
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T11:00",
-      "temperature_2m": 5.2,
+      "temperature_2m": 5.0,
       "cloud_cover": 0,
-      "shortwave_radiation": 464.0,
-      "direct_normal_irradiance": 716.0,
-      "diffuse_radiation": 137.5
+      "shortwave_radiation": 469.0,
+      "direct_normal_irradiance": 726.8,
+      "diffuse_radiation": 137.6
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T12:00",
-      "temperature_2m": 6.2,
+      "temperature_2m": 5.9,
       "cloud_cover": 0,
-      "shortwave_radiation": 535.0,
-      "direct_normal_irradiance": 764.4,
-      "diffuse_radiation": 142.0
+      "shortwave_radiation": 539.0,
+      "direct_normal_irradiance": 772.4,
+      "diffuse_radiation": 141.9
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T13:00",
-      "temperature_2m": 7.2,
+      "temperature_2m": 6.5,
       "cloud_cover": 0,
-      "shortwave_radiation": 543.0,
-      "direct_normal_irradiance": 766.1,
-      "diffuse_radiation": 142.7
+      "shortwave_radiation": 547.0,
+      "direct_normal_irradiance": 774.1,
+      "diffuse_radiation": 142.5
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T14:00",
-      "temperature_2m": 7.9,
+      "temperature_2m": 7.1,
       "cloud_cover": 0,
-      "shortwave_radiation": 489.0,
-      "direct_normal_irradiance": 726.5,
-      "diffuse_radiation": 139.8
+      "shortwave_radiation": 493.0,
+      "direct_normal_irradiance": 735.1,
+      "diffuse_radiation": 139.7
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T15:00",
-      "temperature_2m": 8.1,
+      "temperature_2m": 7.4,
       "cloud_cover": 0,
-      "shortwave_radiation": 379.0,
-      "direct_normal_irradiance": 635.2,
+      "shortwave_radiation": 383.0,
+      "direct_normal_irradiance": 645.4,
       "diffuse_radiation": 130.3
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T16:00",
-      "temperature_2m": 8.2,
-      "cloud_cover": 1,
-      "shortwave_radiation": 227.0,
-      "direct_normal_irradiance": 469.7,
-      "diffuse_radiation": 104.4
+      "temperature_2m": 7.2,
+      "cloud_cover": 0,
+      "shortwave_radiation": 229.0,
+      "direct_normal_irradiance": 476.9,
+      "diffuse_radiation": 104.6
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T17:00",
-      "temperature_2m": 7.9,
-      "cloud_cover": 23,
-      "shortwave_radiation": 64.0,
-      "direct_normal_irradiance": 172.6,
-      "diffuse_radiation": 44.7
+      "temperature_2m": 6.7,
+      "cloud_cover": 0,
+      "shortwave_radiation": 66.0,
+      "direct_normal_irradiance": 185.8,
+      "diffuse_radiation": 45.2
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T18:00",
-      "temperature_2m": 7.6,
-      "cloud_cover": 77,
+      "temperature_2m": 6.6,
+      "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T19:00",
-      "temperature_2m": 7.5,
-      "cloud_cover": 50,
+      "temperature_2m": 6.6,
+      "cloud_cover": 25,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T20:00",
-      "temperature_2m": 7.8,
-      "cloud_cover": 39,
+      "temperature_2m": 6.8,
+      "cloud_cover": 2,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T21:00",
-      "temperature_2m": 8.2,
-      "cloud_cover": 14,
+      "temperature_2m": 7.1,
+      "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T22:00",
-      "temperature_2m": 8.7,
-      "cloud_cover": 3,
+      "temperature_2m": 7.4,
+      "cloud_cover": 1,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
       "diffuse_radiation": 0.0
     },
     {
-      "collected_at_kst": "2026-11-23T09:00:20+09:00",
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
       "time": "2026-11-25T23:00",
+      "temperature_2m": 7.7,
+      "cloud_cover": 1,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T00:00",
+      "temperature_2m": 8.3,
+      "cloud_cover": 2,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T01:00",
+      "temperature_2m": 8.6,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T02:00",
+      "temperature_2m": 8.7,
+      "cloud_cover": 1,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T03:00",
+      "temperature_2m": 8.8,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T04:00",
       "temperature_2m": 9.0,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T05:00",
+      "temperature_2m": 9.1,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T06:00",
+      "temperature_2m": 9.4,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T07:00",
+      "temperature_2m": 9.8,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T08:00",
+      "temperature_2m": 10.4,
+      "cloud_cover": 0,
+      "shortwave_radiation": 23.0,
+      "direct_normal_irradiance": 21.3,
+      "diffuse_radiation": 21.3
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T09:00",
+      "temperature_2m": 11.3,
+      "cloud_cover": 0,
+      "shortwave_radiation": 163.0,
+      "direct_normal_irradiance": 365.5,
+      "diffuse_radiation": 87.6
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T10:00",
+      "temperature_2m": 12.4,
+      "cloud_cover": 0,
+      "shortwave_radiation": 324.0,
+      "direct_normal_irradiance": 574.3,
+      "diffuse_radiation": 123.7
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T11:00",
+      "temperature_2m": 13.2,
+      "cloud_cover": 0,
+      "shortwave_radiation": 446.0,
+      "direct_normal_irradiance": 680.8,
+      "diffuse_radiation": 137.8
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T12:00",
+      "temperature_2m": 13.8,
+      "cloud_cover": 0,
+      "shortwave_radiation": 516.0,
+      "direct_normal_irradiance": 729.9,
+      "diffuse_radiation": 143.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T13:00",
+      "temperature_2m": 14.2,
+      "cloud_cover": 0,
+      "shortwave_radiation": 527.0,
+      "direct_normal_irradiance": 737.6,
+      "diffuse_radiation": 143.6
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T14:00",
+      "temperature_2m": 14.5,
+      "cloud_cover": 1,
+      "shortwave_radiation": 478.0,
+      "direct_normal_irradiance": 706.6,
+      "diffuse_radiation": 140.1
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T15:00",
+      "temperature_2m": 14.7,
+      "cloud_cover": 1,
+      "shortwave_radiation": 370.0,
+      "direct_normal_irradiance": 616.0,
+      "diffuse_radiation": 130.2
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T16:00",
+      "temperature_2m": 14.5,
+      "cloud_cover": 0,
+      "shortwave_radiation": 223.0,
+      "direct_normal_irradiance": 459.7,
+      "diffuse_radiation": 103.8
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T17:00",
+      "temperature_2m": 13.9,
+      "cloud_cover": 37,
+      "shortwave_radiation": 64.0,
+      "direct_normal_irradiance": 176.8,
+      "diffuse_radiation": 44.4
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T18:00",
+      "temperature_2m": 13.0,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T19:00",
+      "temperature_2m": 12.6,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T20:00",
+      "temperature_2m": 12.7,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T21:00",
+      "temperature_2m": 13.0,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T22:00",
+      "temperature_2m": 13.2,
+      "cloud_cover": 0,
+      "shortwave_radiation": 0.0,
+      "direct_normal_irradiance": 0.0,
+      "diffuse_radiation": 0.0
+    },
+    {
+      "collected_at_kst": "2026-11-24T04:00:09+09:00",
+      "time": "2026-11-26T23:00",
+      "temperature_2m": 13.4,
       "cloud_cover": 0,
       "shortwave_radiation": 0.0,
       "direct_normal_irradiance": 0.0,
