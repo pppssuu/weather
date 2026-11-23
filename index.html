@@ -9,13 +9,13 @@
     body { font-family: system-ui, -apple-system, sans-serif; max-width: 1040px; margin: 24px auto; padding: 0 16px; color: #1f2937; }
     .controls { display: flex; flex-wrap: wrap; gap: 16px; background: #f3f4f6; padding: 14px; border-radius: 10px; margin-bottom: 20px; }
     .controls label { display: flex; flex-direction: column; font-size: 0.9rem; gap: 4px; }
-    .controls input { padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 6px; width: 130px; }
+    .controls input { padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 6px; width: 140px; }
     .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 20px; background: #fff; }
     .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 12px; }
   </style>
 </head>
 <body>
-  <h1>삼척 태양광 일사량 · 발전량 모니터링</h1>
+  <h1>삼척 태양광 일사량 · 구름량 · 발전량 모니터링</h1>
   <div id="meta" class="meta">데이터 불러오는 중...</div>
 
   <div class="controls">
@@ -27,11 +27,20 @@
       성능비 PR (0.5 ~ 0.95)
       <input id="prValue" type="number" step="0.01" min="0.5" max="0.95" value="0.80" />
     </label>
+    <label>
+      구름 추가 감산계수 α (0 ~ 0.5)
+      <input id="cloudAlpha" type="number" step="0.05" min="0" max="0.5" value="0.00" />
+    </label>
   </div>
 
   <div class="card">
     <h2>일사량 추이 (W/m²)</h2>
-    <canvas id="irradianceChart" height="100"></canvas>
+    <canvas id="irradianceChart" height="95"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>구름량 추이 (%)</h2>
+    <canvas id="cloudChart" height="75"></canvas>
   </div>
 
   <div class="card">
@@ -39,27 +48,32 @@
     <canvas id="powerChart" height="90"></canvas>
   </div>
 
-  <div class="card">
-    <h2>구름량 추이 (%)</h2>
-    <canvas id="cloudChart" height="75"></canvas>
-  </div>
-  
   <script>
     let irrChart = null;
+    let cloudChart = null;
     let pwrChart = null;
     let records = [];
 
     function renderCharts() {
       const cap = parseFloat(document.getElementById("capacityKw").value) || 10;
       const pr = parseFloat(document.getElementById("prValue").value) || 0.8;
+      const alpha = parseFloat(document.getElementById("cloudAlpha").value) || 0;
 
       const labels = records.map(r => r.time.replace("T", " "));
       const ghi = records.map(r => Number(r.shortwave_radiation ?? 0));
       const dni = records.map(r => Number(r.direct_normal_irradiance ?? 0));
       const dhi = records.map(r => Number(r.diffuse_radiation ?? 0));
-      const estKw = ghi.map(g => Number((cap * (g / 1000) * pr).toFixed(2)));
+      const cloud = records.map(r => Number(r.cloud_cover ?? 0));
+
+      const estKw = records.map(r => {
+        const g = Number(r.shortwave_radiation ?? 0);
+        const c = Number(r.cloud_cover ?? 0);
+        const factor = Math.max(0, 1 - alpha * (c / 100));
+        return Number((cap * (g / 1000) * pr * factor).toFixed(2));
+      });
 
       if (irrChart) irrChart.destroy();
+      if (cloudChart) cloudChart.destroy();
       if (pwrChart) pwrChart.destroy();
 
       irrChart = new Chart(document.getElementById("irradianceChart"), {
@@ -75,6 +89,21 @@
         options: { responsive: true, interaction: { mode: "index", intersect: false } }
       });
 
+      cloudChart = new Chart(document.getElementById("cloudChart"), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            { label: "구름량 (cloud_cover, %)", data: cloud, borderWidth: 2, pointRadius: 1 }
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: "index", intersect: false },
+          scales: { y: { min: 0, max: 100 } }
+        }
+      });
+
       pwrChart = new Chart(document.getElementById("powerChart"), {
         type: "line",
         data: {
@@ -85,7 +114,6 @@
         },
         options: { responsive: true, interaction: { mode: "index", intersect: false } }
       });
-      
     }
 
     async function init() {
@@ -98,6 +126,7 @@
 
     document.getElementById("capacityKw").addEventListener("input", renderCharts);
     document.getElementById("prValue").addEventListener("input", renderCharts);
+    document.getElementById("cloudAlpha").addEventListener("input", renderCharts);
     init();
   </script>
 </body>
