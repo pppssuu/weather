@@ -3,88 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>태양광 일사량 · 구름량 · 발전량 대시보드 (1열 세로 배치)</title>
+  <title>태양광 일사량 · 구름량 · 발전량 대시보드</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
-      min-height: 100dvh;
-      overflow-x: hidden;
-      overflow-y: auto;
+      height: 100dvh;
+      overflow: hidden;
       font-family: system-ui, -apple-system, sans-serif;
       background: #f8fafc;
       color: #0f172a;
     }
     .app {
-      max-width: 1440px;
+      height: 100%;
+      max-width: 1920px;
       margin: 0 auto;
-      padding: 14px 18px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+      padding: 8px 14px;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      gap: 7px;
     }
     .top-bar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 8px;
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 10px 16px;
+      border-radius: 8px;
+      padding: 6px 12px;
     }
     .title-group {
       display: flex;
-      flex-wrap: wrap;
       align-items: baseline;
       gap: 10px;
       min-width: 0;
     }
     .title-group h1 {
       margin: 0;
-      font-size: 1.08rem;
+      font-size: 0.98rem;
       font-weight: 700;
       white-space: nowrap;
     }
     .meta {
-      font-size: 0.8rem;
+      font-size: 0.74rem;
       color: #64748b;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .controls {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
     }
     .controls label {
       display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.82rem;
+      gap: 4px;
+      font-size: 0.76rem;
       font-weight: 600;
       color: #334155;
       white-space: nowrap;
     }
     .controls select,
     .controls input {
-      padding: 5px 8px;
+      padding: 3px 6px;
       border: 1px solid #cbd5e1;
       border-radius: 6px;
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       background: #fff;
       color: #0f172a;
     }
-    .controls select { min-width: 165px; }
-    .controls input { width: 82px; }
+    .controls select { min-width: 145px; }
+    .controls input { width: 70px; }
     .csv-link {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: #1d4ed8;
       text-decoration: none;
-      padding: 6px 10px;
+      padding: 4px 8px;
       border: 1px solid #bfdbfe;
       border-radius: 6px;
       background: #eff6ff;
@@ -92,54 +94,86 @@
     }
     .csv-link:hover { background: #dbeafe; }
 
-    .col-1x4 {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 14px;
-    }
-    .card {
-      min-width: 0;
+    .summary-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 12px 16px;
+      border-radius: 8px;
+      padding: 6px 12px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 5px;
     }
-    .card h2 {
+    .summary-card h2 {
       margin: 0;
-      font-size: 0.92rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: #1e293b;
-    }
-    .chart-box {
-      position: relative;
-      width: 100%;
-      height: 240px;
     }
     .summary-body {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
+      gap: 8px;
     }
     .kpi {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 10px 12px;
+      border-radius: 6px;
+      padding: 5px 10px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      min-width: 0;
     }
-    .kpi .k-label { font-size: 0.78rem; color: #64748b; }
-    .kpi .k-val { font-size: 1.12rem; font-weight: 700; color: #0f172a; margin-top: 3px; }
+    .kpi .k-label {
+      font-size: 0.72rem;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .kpi .k-val {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f172a;
+      white-space: nowrap;
+    }
 
-    @media (max-width: 768px) {
+    .chart-card {
+      min-height: 0;
+      min-width: 0;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 6px 12px;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 3px;
+    }
+    .chart-card h2 {
+      margin: 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.2;
+    }
+    .chart-box {
+      position: relative;
+      min-height: 0;
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 900px) {
+      html, body { height: auto; overflow: auto; }
+      .app { height: auto; display: flex; flex-direction: column; }
       .summary-body { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .chart-box { height: 210px; }
+      .chart-box { height: 190px; }
     }
   </style>
 </head>
 <body>
   <div class="app">
+    <!-- 1. 상단 타이틀 및 컨트롤 -->
     <header class="top-bar">
       <div class="title-group">
         <h1>태양광 일사량 · 구름량 · 발전량</h1>
@@ -166,44 +200,46 @@
       </div>
     </header>
 
-    <main class="col-1x4">
-      <section class="card">
-        <h2 id="irrTitle">일사량 추이 (W/m²)</h2>
-        <div class="chart-box"><canvas id="irradianceChart"></canvas></div>
-      </section>
-
-      <section class="card">
-        <h2 id="cloudTitle">구름량 추이 (%)</h2>
-        <div class="chart-box"><canvas id="cloudChart"></canvas></div>
-      </section>
-
-      <section class="card">
-        <h2 id="pwrTitle">예상 태양광 발전량 (kW)</h2>
-        <div class="chart-box"><canvas id="powerChart"></canvas></div>
-      </section>
-
-      <section class="card">
-        <h2 id="sumTitle">예보 기간 요약</h2>
-        <div class="summary-body">
-          <div class="kpi">
-            <div class="k-label">최대 GHI 일사량</div>
-            <div id="kpiMaxGhi" class="k-val">-</div>
-          </div>
-          <div class="kpi">
-            <div class="k-label">평균 구름량</div>
-            <div id="kpiAvgCloud" class="k-val">-</div>
-          </div>
-          <div class="kpi">
-            <div class="k-label">최대 예상 출력</div>
-            <div id="kpiMaxKw" class="k-val">-</div>
-          </div>
-          <div class="kpi">
-            <div class="k-label">누적 예상 발전량</div>
-            <div id="kpiSumKwh" class="k-val">-</div>
-          </div>
+    <!-- 2. 예보 기간 요약 -->
+    <section class="summary-card">
+      <h2 id="sumTitle">예보 기간 요약</h2>
+      <div class="summary-body">
+        <div class="kpi">
+          <span class="k-label">최대 GHI 일사량</span>
+          <span id="kpiMaxGhi" class="k-val">-</span>
         </div>
-      </section>
-    </main>
+        <div class="kpi">
+          <span class="k-label">평균 구름량</span>
+          <span id="kpiAvgCloud" class="k-val">-</span>
+        </div>
+        <div class="kpi">
+          <span class="k-label">최대 예상 출력</span>
+          <span id="kpiMaxKw" class="k-val">-</span>
+        </div>
+        <div class="kpi">
+          <span class="k-label">누적 예상 발전량</span>
+          <span id="kpiSumKwh" class="k-val">-</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 일사량 추이 (W/m²) -->
+    <section class="chart-card">
+      <h2 id="irrTitle">일사량 추이 (W/m²)</h2>
+      <div class="chart-box"><canvas id="irradianceChart"></canvas></div>
+    </section>
+
+    <!-- 4. 구름량 추이 (%) -->
+    <section class="chart-card">
+      <h2 id="cloudTitle">구름량 추이 (%)</h2>
+      <div class="chart-box"><canvas id="cloudChart"></canvas></div>
+    </section>
+
+    <!-- 5. 예상 태양광 발전량 (kW) -->
+    <section class="chart-card">
+      <h2 id="pwrTitle">예상 태양광 발전량 (kW)</h2>
+      <div class="chart-box"><canvas id="powerChart"></canvas></div>
+    </section>
   </div>
 
   <script>
@@ -218,10 +254,15 @@
       maintainAspectRatio: false,
       animation: false,
       interaction: { mode: "index", intersect: false },
-      plugins: { legend: { labels: { boxWidth: 12, font: { size: 11 } } } },
+      plugins: {
+        legend: {
+          position: "top",
+          labels: { boxWidth: 10, padding: 8, font: { size: 10 } }
+        }
+      },
       scales: {
-        x: { ticks: { maxTicksLimit: 12, font: { size: 10 } } },
-        y: { ticks: { font: { size: 10 } } }
+        x: { ticks: { maxTicksLimit: 14, maxRotation: 0, font: { size: 9 } } },
+        y: { ticks: { maxTicksLimit: 5, font: { size: 9 } } }
       }
     };
 
@@ -257,10 +298,10 @@
 
       document.getElementById("meta").textContent =
         `${city.name} (${city.lat}, ${city.lon} · ${city.timezone}) | 갱신(KST): ${updatedAtKst}`;
+      document.getElementById("sumTitle").textContent = `${city.name} 예보 기간 요약 (${records.length}시간)`;
       document.getElementById("irrTitle").textContent = `${city.name} 일사량 추이 (W/m²)`;
       document.getElementById("cloudTitle").textContent = `${city.name} 구름량 추이 (%)`;
       document.getElementById("pwrTitle").textContent = `${city.name} 예상 태양광 발전량 (kW)`;
-      document.getElementById("sumTitle").textContent = `${city.name} 예보 요약 (${records.length}시간)`;
       document.getElementById("csvDownload").href = `./data/csv/${cityId}.csv`;
 
       const labels = records.map(r => r.time_local.slice(5).replace("T", " "));
@@ -295,4 +336,67 @@
           labels,
           datasets: [
             { label: "GHI", data: ghi, borderWidth: 1.8, pointRadius: 0 },
-            { label: "DNI", data: dni, borderWidth:
+            { label: "DNI", data: dni, borderWidth: 1.8, pointRadius: 0 },
+            { label: "DHI", data: dhi, borderWidth: 1.4, pointRadius: 0 }
+          ]
+        },
+        options: commonChartOptions
+      });
+
+      cloudChart = new Chart(document.getElementById("cloudChart"), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            { label: "구름량 (%)", data: cloud, borderWidth: 1.8, pointRadius: 0 }
+          ]
+        },
+        options: {
+          ...commonChartOptions,
+          scales: {
+            ...commonChartOptions.scales,
+            y: { min: 0, max: 100, ticks: { stepSize: 50, font: { size: 9 } } }
+          }
+        }
+      });
+
+      pwrChart = new Chart(document.getElementById("powerChart"), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            { label: "추정 발전량 (kW)", data: estKw, borderWidth: 1.8, pointRadius: 0, fill: true }
+          ]
+        },
+        options: commonChartOptions
+      });
+    }
+
+    async function init() {
+      const metaEl = document.getElementById("meta");
+      try {
+        const res = await fetch("./data/latest_forecast.json?t=" + Date.now());
+        if (!res.ok) throw new Error(`HTTP ${res.status} (${res.statusText})`);
+        const data = await res.json();
+        updatedAtKst = data.updated_at_kst || "";
+        allCities = data.cities || {};
+        const order = data.city_order || Object.keys(allCities);
+        if (order.length === 0) {
+          throw new Error("도시 데이터가 비어 있습니다. Actions를 먼저 실행해 주세요.");
+        }
+        populateCitySelect(order, allCities);
+        renderCharts();
+      } catch (err) {
+        console.error(err);
+        metaEl.textContent = `로드 실패: ${err.message}`;
+      }
+    }
+
+    document.getElementById("citySelect").addEventListener("change", renderCharts);
+    document.getElementById("capacityKw").addEventListener("input", renderCharts);
+    document.getElementById("prValue").addEventListener("input", renderCharts);
+    document.getElementById("cloudAlpha").addEventListener("input", renderCharts);
+    init();
+  </script>
+</body>
+</html>
