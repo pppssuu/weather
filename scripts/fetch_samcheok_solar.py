@@ -30,6 +30,7 @@ CITIES = [
     {"id": "canberra", "group": "세계 수도", "name": "캔버라 (호주)", "lat": -35.2809, "lon": 149.1300, "tz": "Australia/Sydney"},
     {"id": "new_delhi", "group": "세계 수도", "name": "뉴델리 (인도)", "lat": 28.6139, "lon": 77.2090, "tz": "Asia/Kolkata"},
     {"id": "singapore", "group": "세계 수도", "name": "싱가포르 (싱가포르)", "lat": 1.3521, "lon": 103.8198, "tz": "Asia/Singapore"},
+    {"id": "calgary", "group": "세계 수도", "name": "캘거리 (캐나다)", "lat": 51.0447, "lon": -114.0719, "tz": "America/Edmonton"},
 ]
 
 ROOT = Path(__file__).resolve().parent.parent
