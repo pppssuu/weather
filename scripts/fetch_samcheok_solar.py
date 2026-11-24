@@ -61,7 +61,7 @@ def main():
         "https://api.open-meteo.com/v1/forecast"
         f"?latitude={lats}&longitude={lons}"
         "&hourly=temperature_2m,cloud_cover,shortwave_radiation,direct_normal_irradiance,diffuse_radiation"
-        f"&timezone={tzs}&forecast_days=3"
+        f"&timezone={tzs}&forecast_days=7"
     )
 
     resp = requests.get(url, timeout=45)
