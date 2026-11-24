@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>태양광 일사량 · 구름량 · 발전량 대시보드</title>
+  <title>태양광 일사량 · 구름량 · 발전량 대시보드 (7일 예보)</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     * { box-sizing: border-box; }
@@ -217,7 +217,7 @@
           <span id="kpiMaxKw" class="k-val">-</span>
         </div>
         <div class="kpi">
-          <span class="k-label">누적 예상 발전량</span>
+          <span class="k-label">7일 누적 예상 발전량</span>
           <span id="kpiSumKwh" class="k-val">-</span>
         </div>
       </div>
@@ -261,7 +261,7 @@
         }
       },
       scales: {
-        x: { ticks: { maxTicksLimit: 14, maxRotation: 0, font: { size: 9 } } },
+        x: { ticks: { maxTicksLimit: 18, maxRotation: 0, font: { size: 9 } } },
         y: { ticks: { maxTicksLimit: 5, font: { size: 9 } } }
       }
     };
@@ -295,10 +295,11 @@
       const cap = parseFloat(document.getElementById("capacityKw").value) || 10;
       const pr = parseFloat(document.getElementById("prValue").value) || 0.8;
       const alpha = parseFloat(document.getElementById("cloudAlpha").value) || 0;
+      const daysCount = (records.length / 24).toFixed(1).replace(/\.0$/, "");
 
       document.getElementById("meta").textContent =
         `${city.name} (${city.lat}, ${city.lon} · ${city.timezone}) | 갱신(KST): ${updatedAtKst}`;
-      document.getElementById("sumTitle").textContent = `${city.name} 예보 기간 요약 (${records.length}시간)`;
+      document.getElementById("sumTitle").textContent = `${city.name} 예보 요약 (${daysCount}일 · ${records.length}시간)`;
       document.getElementById("irrTitle").textContent = `${city.name} 일사량 추이 (W/m²)`;
       document.getElementById("cloudTitle").textContent = `${city.name} 구름량 추이 (%)`;
       document.getElementById("pwrTitle").textContent = `${city.name} 예상 태양광 발전량 (kW)`;
