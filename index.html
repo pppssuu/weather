@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>태양광 일사량 · 구름량 · 발전량 대시보드 (7일 예보)</title>
+  <title>태양광 일사량 · 구름량 · 발전량 대시보드</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     * { box-sizing: border-box; }
@@ -20,10 +20,10 @@
       height: 100%;
       max-width: 1920px;
       margin: 0 auto;
-      padding: 8px 14px;
+      padding: 8px 14px 6px;
       display: grid;
-      grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-      gap: 7px;
+      grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+      gap: 6px;
     }
     .top-bar {
       display: flex;
@@ -163,11 +163,20 @@
       height: 100%;
     }
 
+    .footer-note {
+      margin: 0;
+      text-align: right;
+      font-size: 0.68rem;
+      color: #64748b;
+      line-height: 1.2;
+    }
+
     @media (max-width: 900px) {
       html, body { height: auto; overflow: auto; }
       .app { height: auto; display: flex; flex-direction: column; }
       .summary-body { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .chart-box { height: 190px; }
+      .footer-note { text-align: center; }
     }
   </style>
 </head>
@@ -240,6 +249,9 @@
       <h2 id="pwrTitle">예상 태양광 발전량 (kW)</h2>
       <div class="chart-box"><canvas id="powerChart"></canvas></div>
     </section>
+
+    <!-- 6. 하단 출처 표기 -->
+    <p class="footer-note">데이터는 open-meteo.com 의 OpenAPI를 활용하여 제작하였습니다.</p>
   </div>
 
   <script>
